@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Amita&family=Codystar&family=Crafty+Girls&family=Dosis&display=swap');
+
+:root{
+    --fc-title: rgb(0, 0, 0);
+    --fc-nav-button: rgb(0, 0, 0);
+    --fc-text:  white;
+    --fc-author: white;
+    --fc-circular-button: white ;
+
+    --fs-title: 30pt;
+    --fs-nav-button: 18pt;
+    --fs-text:  20pt;
+    --fs-author: 16pt;
+    --fs-circular-button: 24pt;
+
+    --ff: 'Amita', cursive;
+    --ff-title: var(--ff);    
+    --ff-nav-button: var(--ff);
+    --ff-text: var(--ff);
+    --ff-author: var(--ff);
+    --ff-circular-button: var(--ff);
+    --bg-center: url('../../images/text-writer.jpg');
+    --bg-border: url('../../images/text-writer.jpg');
+    --bg-border-filter: brightness(40%);
+}
+
+header, .nav-button{
+    text-shadow: 0.7px 0.7px rgb(255, 255, 255), -0.7px -0.7px rgb(255, 255, 255) ;
+}
+
+.quote{
+    border-radius: 10px;
+
+    box-shadow: 10px 10px 10px -3px black;
+
+    background-color: rgba(30, 1, 1, 0.382);
+}
+
+.bg-img{
+    background-position: 20% 20%;
+    background-color: transparent;
+}
+
+.circular-button{
+    border: 0.2em double white;
+}

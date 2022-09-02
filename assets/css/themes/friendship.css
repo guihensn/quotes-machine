@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Amita&family=Codystar&family=Crafty+Girls&family=Dosis&display=swap');
+
+:root{
+    --fc-title: rgb(255, 255, 255);
+    --fc-nav-button: rgb(255, 255, 255);
+    --fc-text:  white;
+    --fc-author: white;
+    --fc-circular-button: white ;
+
+    --fs-title: 30pt;
+    --fs-nav-button: 16pt;
+    --fs-text:  24pt;
+    --fs-author: 20pt;
+    --fs-circular-button: 24pt;
+
+    --ff: 'Crafty Girls', cursive;
+    --ff-title: var(--ff);
+    --ff-nav-button: var(--ff);
+    --ff-text: var(--ff);
+    --ff-author: var(--ff);
+    --ff-circular-button: var(--ff);
+
+    --bg-center: url('../../images/friends.png');
+    --bg-border: url('../../images/friends.png');
+    --bg-border-filter: brightness(50%);
+}
+
+.quote, .circular-button{
+    border: 0.2em solid white;
+    border-radius: 86px;
+
+    box-shadow: 6px 10px 10px -3px rgb(0 0 0);
+
+    background-color: rgba(26, 49, 44, 0.877);
+}
+
+.quote__text{
+    text-align: left;
+    margin-right: auto;
+}
+
+

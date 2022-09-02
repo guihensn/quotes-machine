@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/icon.png">
+    <title>Quote-Machine</title>
+
+    <link rel="stylesheet" href="assets/css/base/reset.css">
+    <link rel="stylesheet" href="assets/css/base/base.css">
+    <link rel="stylesheet" href="assets/css/utilities-classes.css">
+
+    <link rel="stylesheet" href="assets/css/components/nav-button.css">
+    <link rel="stylesheet" href="assets/css/components/quotes.css">
+    <link rel="stylesheet" href="assets/css/components/circular-button.css">
+    <link rel="stylesheet" href="assets/css/components/transition-img.css">
+
+    <link rel="stylesheet" href="assets/css/effects/futuristic-effect.css">
+    <link rel="stylesheet" href="assets/css/effects/write-effect.css">
+
+    <link id="theme" rel="stylesheet" href="assets/css/themes/typewriter.css">
+</head>
+
+<body class="row justify-center">
+    <div class="transition-img"></div>
+    <div class="bg-img" alt=""></div>
+
+    <div class="column center-container">
+        <header>
+            <h1>Quotes Machine</h1>
+        </header>
+
+        <nav class="row justify-center">
+            <div id="nav-buttons">
+                <button id="theme-1" class="nav-button nav-button--active ml-10" onclick="themesChanger.changeTheme(0)">Typewriter</button>
+                <button id="theme-2" class="nav-button ml-10" onclick="themesChanger.changeTheme(1)">Friendship</button>
+                <button id="theme-3" class="nav-button" onclick="themesChanger.changeTheme(2)">Technology</button>
+            </div>
+        </nav>
+
+        <main id="main" class="column align-center space-around f-1">
+            <div class="spacer f-2"></div>
+
+            <div id="quotes" class="w-100 row justify-center">
+                <div class="invisible quote">
+                    <div class="quote__text"></div>
+                    <div class="quote__author"></div>
+                </div>
+            </div>
+
+            <div class="spacer f-1"></div>
+
+            <div class="column align-center justify-center">
+                <button id="new-quote" class="circular-button" onclick="quotesMachine.newQuote()">New</button>
+            </div>
+
+            <div  class="spacer f-2"></div>
+        </main>
+    </div>
+
+    <script src="js/quotes-writer/TemplateWriter.js"></script>
+    <script src="js/quotes-writer/TemplateWordWriter.js"></script>
+    <script src="js/quotes-writer/futuristicWriter.js"></script>
+    <script src="js/quotes-writer/ManualWriter.js"></script>
+    <script src="js/quotes-writer/TypeWriter.js"></script>
+    <script src="js/QuotesMachine.js"></script>
+    <script src="js/QuotesMachineFactory.js"></script>
+    <script src="js/ThemesChanger.js"></script>
+    <script src="js/ThemesChangerFactory.js"></script>
+    <script src="system.js"></script>
+</body>
+
+</html>

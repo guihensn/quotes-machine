@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Amita&family=Codystar&family=Crafty+Girls&family=Dosis&display=swap');
+
+:root{
+    --fc-title: rgb(255, 255, 255);
+    --fc-nav-button: rgb(255, 255, 255);
+    --fc-text:  rgb(255, 255, 255);
+    --fc-author: white;
+    --fc-circular-button: white ;
+
+    --fs-title: 30pt;
+    --fs-nav-button: 16pt;
+    --fs-text:  20pt;
+    --fs-author: 16pt;
+    --fs-circular-button: 30pt;
+
+    --ff-1: 'Dosis', cursive;
+    --ff-2: 'Codystar', cursive;
+    --ff-title: var(--ff-2);
+    --ff-nav-button: var(--ff-1);
+    --ff-text: var(--ff-1);
+    --ff-author: var(--ff-1);
+    --ff-circular-button: var(--ff-2);
+
+    --bg-center: url('../../images/computer.png');
+    --bg-border: url('../../images/circuit.png');
+    --bg-border-filter: unset;
+}
+
+.center-container{
+    background-position: center;
+}
+
+.quote{
+    border-radius: 5px;
+    box-shadow: 6px 10px 10px -3px rgb(0 0 0);
+    overflow: hidden;
+    background-color: rgb(179 37 124 / 39%);
+}
+
+.quote__text{
+    margin-right: auto;
+}
+
+.quote__author{
+    margin-left: auto;
+}
+
+.circular-button{
+    font-weight: bold;
+    padding: 0.5em;
+    box-shadow: 1px 1px 0px 2px rgb(170, 251, 255) inset;
+    background-color: rgba(0, 25, 76, 0.334);
+}

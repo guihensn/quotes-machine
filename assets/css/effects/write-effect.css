@@ -1,0 +1,19 @@
+.writed-text{
+    --write-duration: 1s;
+    
+    -webkit-mask-image: url('../../images/write-mask.png');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: top left;
+    
+    animation: write var(--write-duration);
+    animation-timing-function: steps(8);
+    animation-fill-mode: forwards;
+}
+
+@keyframes write{
+    0%{
+        -webkit-mask-size: 0% 100%;
+    }100%{
+        -webkit-mask-size: 100% 100%;
+    }
+}

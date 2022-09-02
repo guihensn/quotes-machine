@@ -1,0 +1,60 @@
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.space-around{
+    justify-content: space-around;
+}
+
+
+.f-05{
+    flex-basis: 50%;
+}
+
+.f-1{
+    flex-basis: 100%;
+}
+
+.f-2{
+    flex-basis: 200%;
+}
+
+
+.w-100{
+    width: 100%;
+}
+
+.w-90{
+    width: 90%;
+}
+
+.w-80{
+    width: 80%;
+}
+
+.w-60{
+    width: 60%;
+}
+
+
+.ml-10{
+    margin-left: 10px;
+}
+
+.invisible{
+   visibility: hidden !important;
+}

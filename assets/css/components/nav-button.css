@@ -1,0 +1,21 @@
+.nav-button{
+    color: var(--fc-nav-button);
+    font-family: var(--ff-nav-button);
+    font-size: var(--fs-nav-button);
+
+    border: unset;
+    cursor: pointer;
+    
+    background-color: transparent;
+}
+
+.nav-button--active::before{
+    content: '>>>';
+    display: inline;
+}
+
+.nav-button--active::after{
+    content: '<<<';
+    display: inline;
+}
+

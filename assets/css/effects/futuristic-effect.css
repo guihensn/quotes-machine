@@ -1,0 +1,21 @@
+.futuristic-text{
+    --x: 0px;
+    --y: 100px;
+
+    display: inline-block;
+    
+    padding-left: 0.4em;
+
+    animation: futuristic 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes futuristic{ 
+    0%{
+        color: cyan;
+        transform: translate(var(--x), var(--y));
+    }100%{
+        color: white;
+        transform: translate(0px);
+    }
+}

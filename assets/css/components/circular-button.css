@@ -1,0 +1,23 @@
+.circular-button{
+    color: var(--fc-circular-button);
+    font-size: var(--fs-circular-button);
+    font-family: var(--ff-circular-button);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: fit-content;
+    aspect-ratio: 1;
+
+    padding: 1em;
+
+    border-width: 4px;
+    border-color: aliceblue;
+    
+    border-radius: 100%;
+    border-style: double;
+
+    background-color: black;
+    cursor:pointer;
+}
