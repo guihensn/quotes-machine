@@ -10,7 +10,7 @@ var ThemeChangerFactory = /** @class */ (function () {
         this.makesAudios();
         this.makeWriters();
         this.makeThemes();
-        quotesMachine.quotesWriter = this.themes[0].writer;
+        quotesMachine.quotesWriter = this.themes[1].writer;
         return new ThemesChanger(this.themes, this.themeEl, this.transitionEl, this.audioTransition, quotesMachine);
     };
     ThemeChangerFactory.prototype.selectElements = function () {
@@ -45,11 +45,6 @@ var ThemeChangerFactory = /** @class */ (function () {
     ThemeChangerFactory.prototype.makeThemes = function () {
         this.themes = [
             {
-                button: this.themeButton1,
-                name: 'typewriter',
-                writer: this.typeWriter
-            },
-            {
                 button: this.themeButton2,
                 name: 'friendship',
                 writer: this.manualWriter
@@ -58,7 +53,12 @@ var ThemeChangerFactory = /** @class */ (function () {
                 button: this.themeButton3,
                 name: 'technology',
                 writer: this.futuristicWriter
-            }
+            },
+            {
+                button: this.themeButton1,
+                name: 'typewriter',
+                writer: this.typeWriter
+            },
         ];
     };
     return ThemeChangerFactory;

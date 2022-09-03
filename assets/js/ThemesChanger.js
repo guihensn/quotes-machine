@@ -1,11 +1,11 @@
-var FORWARD_TRANSITE_CLASS = 'transite-img--forward.js';
-var BACKWARD_TRANSITE_CLASS = 'transite-img--backward.js';
-var ACTIVE_BUTTON_CLASS = 'nav-button--active.js';
+var FORWARD_TRANSITE_CLASS = 'transite-img--forward';
+var BACKWARD_TRANSITE_CLASS = 'transite-img--backward';
+var ACTIVE_BUTTON_CLASS = 'nav-button--active';
 var ThemesChanger = /** @class */ (function () {
     function ThemesChanger(themes, themeEl, transitionEl, audioTransition, quotesMachine) {
         this.themes = themes;
         this.themeEl = themeEl;
-        this.currentThemeNumber = 0;
+        this.currentThemeNumber = 1;
         this.transitionEl = transitionEl;
         this.audioTransition = audioTransition;
         this.quotesMachine = quotesMachine;

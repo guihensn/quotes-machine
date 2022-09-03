@@ -1,9 +1,9 @@
 import { TemplateWriter } from './text-writer-strategy/TemplateWriter.js';
 import { QuotesMachine } from "./QuotesMachine.js";
 
-const FORWARD_TRANSITE_CLASS = 'transite-img--forward.js';
-const BACKWARD_TRANSITE_CLASS = 'transite-img--backward.js';
-const ACTIVE_BUTTON_CLASS = 'nav-button--active.js';
+const FORWARD_TRANSITE_CLASS = 'transite-img--forward';
+const BACKWARD_TRANSITE_CLASS = 'transite-img--backward';
+const ACTIVE_BUTTON_CLASS = 'nav-button--active';
 
 export interface Theme{
     button: HTMLElement,
@@ -23,12 +23,11 @@ export class ThemesChanger{
     constructor(themes: Theme[], themeEl: HTMLElement, transitionEl: HTMLElement, audioTransition: HTMLAudioElement, quotesMachine: QuotesMachine) {
         this.themes = themes;
         this.themeEl = themeEl;
-        this.currentThemeNumber = 0;
+        this.currentThemeNumber = 1;
         this.transitionEl = transitionEl;
         this.audioTransition = audioTransition;
         this.quotesMachine = quotesMachine;
     }
-
 
     changeTheme(themeNumber:number){
         if(this.currentThemeNumber - themeNumber == 0){
@@ -38,7 +37,6 @@ export class ThemesChanger{
         if(this.currentThemeNumber - themeNumber < 0){
             return this.transite(themeNumber, FORWARD_TRANSITE_CLASS);
         }
-    
         this.transite(themeNumber, BACKWARD_TRANSITE_CLASS);
     }
     

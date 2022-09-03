@@ -35,7 +35,7 @@ export class ThemeChangerFactory {
         this.makeWriters();
         this.makeThemes();
 
-        quotesMachine.quotesWriter = this.themes[0].writer;
+        quotesMachine.quotesWriter = this.themes[1].writer;
 
         return new ThemesChanger(
             this.themes,
@@ -83,11 +83,6 @@ export class ThemeChangerFactory {
     makeThemes() {
         this.themes = [
             {
-                button: this.themeButton1,
-                name: 'typewriter',
-                writer: this.typeWriter
-            },
-            {
                 button: this.themeButton2,
                 name: 'friendship',
                 writer: this.manualWriter
@@ -96,7 +91,12 @@ export class ThemeChangerFactory {
                 button: this.themeButton3,
                 name: 'technology',
                 writer: this.futuristicWriter
-            }
+            }, 
+            {
+                button: this.themeButton1,
+                name: 'typewriter',
+                writer: this.typeWriter
+            },
         ];
     }
 }
