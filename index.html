@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="assets/css/effects/write-effect.css">
 
     <link id="theme" rel="stylesheet" href="assets/css/themes/technology.css">
+
+    <link rel="manifest" href="manifest.json">
 </head>
 
 <body class="row justify-center">
@@ -66,6 +68,12 @@
     </div>
 
     <script src="assets/js/index.js" type="module"></script>
+    
+    <script>
+        if('serviceWorker' in navigator){
+            navigator.serviceWorker.register('/service-worker.js');
+        }
+    </script>
 </body>
 
 </html>
