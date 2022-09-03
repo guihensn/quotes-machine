@@ -1,4 +1,6 @@
 .nav-button{
+    flex: 1;
+    
     color: var(--fc-nav-button);
     font-family: var(--ff-nav-button);
     font-size: var(--fs-nav-button);
