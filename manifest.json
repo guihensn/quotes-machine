@@ -1,7 +1,7 @@
 {
     "name": "Quotes Machine",
     "short_name": "Quotes",
-    "start_url": "./quotes-machine",
+    "start_url": "https://guihensn.github.io/quotes-machine",
     "icons": [
         {
             "src": "assets/icons/manifest-icon-192.maskable.png",
