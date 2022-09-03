@@ -54,3 +54,13 @@ header, .nav-button{
 .circular-button{
     border: 0.2em double white;
 }
+
+@media screen and (max-width: 750px) {
+    body{
+        --fs-nav-button: 9pt;
+    }
+
+    .nav-button{
+        margin-top: 8px;;
+    }
+}   

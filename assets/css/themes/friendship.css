@@ -39,4 +39,18 @@
     margin-right: auto;
 }
 
+@media screen and (max-width: 750px) {
+    .quote{
+        border-left: none;
+        border-radius: 0;
+
+        border-right: none;
+    }
+
+    body{
+        margin-top: 12px;
+        --fs-nav-button: 9pt;
+    }
+}   
+
 
