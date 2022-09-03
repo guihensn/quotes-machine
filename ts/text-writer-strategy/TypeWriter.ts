@@ -1,5 +1,7 @@
-class TypeWriter extends TemplateWriter{
-    startWriting(textArray, i){
+import { TemplateWriter } from "./TemplateWriter.js";
+
+export class TypeWriter extends TemplateWriter{
+    protected startWriting(textArray, i){
         if(i > textArray.length){
             this.resolveWriting();
             return;

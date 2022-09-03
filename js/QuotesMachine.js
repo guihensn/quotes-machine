@@ -1,68 +1,46 @@
-class QuotesMachine {
-    quotesWriter;
-
-    buttonNewEl;
-    quoteEl;
-    quoteTextEl;
-    authorEl;
-
-    currentThemeNumber;
-    currentQuote;
-    currentAuthor;
-
-    constructor(buttonNewEl, quoteElement, quoteTextEl, authorEl) {
+var QuotesMachine = /** @class */ (function () {
+    function QuotesMachine(buttonNewEl, quoteElement, quoteTextEl, authorEl) {
         this.buttonNewEl = buttonNewEl;
         this.quoteEl = quoteElement;
         this.quoteTextEl = quoteTextEl;
         this.authorEl = authorEl;
     }
-
-    changeWriter(newWriter) { 
-        if (this.quotesWriter.isWriting) {  
-           this.quotesWriter.stopWriting();
-           this.quotesWriter = newWriter;
-           this.startWrite();
+    QuotesMachine.prototype.changeWriter = function (newWriter) {
+        if (this.quotesWriter.isWriting) {
+            this.quotesWriter.stopWriting();
+            this.quotesWriter = newWriter;
+            this.startWrite();
         }
-
         this.quotesWriter = newWriter;
-    }
-
-    newQuote() {
-        fetch(`https://api.quotable.io/random`)
-            .then((result) => result.json())
-            .then((data) => {
-                this.currentQuote = data.content;
-                this.currentAuthor = data.author;
-                this.startWrite();
-            })
-    }
-
-    startWrite(){
+    };
+    QuotesMachine.prototype.newQuote = function () {
+        var _this = this;
+        fetch("https://api.quotable.io/random")
+            .then(function (result) { return result.json(); })
+            .then(function (data) {
+            _this.currentQuote = data.content;
+            _this.currentAuthor = data.author;
+            _this.startWrite();
+        });
+    };
+    QuotesMachine.prototype.startWrite = function () {
         this.resetText();
         this.showQuote();
         this.hideButton();
         this.quotesWriter.stopWriting();
         this.quotesWriter.write(this.currentQuote, this.currentAuthor);
-    }
-
-    resetText() {
+    };
+    QuotesMachine.prototype.resetText = function () {
         this.quoteTextEl.innerHTML = '';
         this.authorEl.innerHTML = '';
-    }
-
-    showQuote() {
+    };
+    QuotesMachine.prototype.showQuote = function () {
         this.quoteEl.classList.remove('invisible');
-    }
-
-    hideQuote() {
-        this.quoteEl.classList.add('invisible');
-    }
-
-    hideButton() {
+    };
+    QuotesMachine.prototype.hideButton = function () {
         this.buttonNewEl.classList.add('invisible');
-    }
-
-    showButton() {
-        this.buttonNewEl.classList.remove('invisible');
-    }
-}
+    };
+    return QuotesMachine;
+}());
+export { QuotesMachine };
+//# sourceMappingURL=QuotesMachine.js.map
